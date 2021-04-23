@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import mockData from "./data.json";
+import Chart from "./Chart";
 
 const Container = styled.div`
 	width: 100%;
@@ -26,6 +27,10 @@ const Label = styled.span`
 	font-weight: bold;
 	margin-left: 8px;
 	margin-right: 4px;
+`
+
+const ChartWrapper = styled.div`
+	flex: 1;
 `
 
 
@@ -80,6 +85,13 @@ function App() {
 					</option>
 				</Select>
 			</Topbar>
+			<ChartWrapper>
+				<Chart
+					categoryOne={categoryOne}
+					categoryTwo={categoryTwo}
+					data={data}
+				/>
+			</ChartWrapper>
 		</Container>
   );
 }
