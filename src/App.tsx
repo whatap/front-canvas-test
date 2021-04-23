@@ -42,10 +42,8 @@ function App() {
 	useEffect(() => {
 		setTimeout(() => {
 			setData(mockData);
-		}, 3000);
+		}, 2000);
 	}, []);
-
-	console.log("data =", data);
 
   return (
 		<Container>
