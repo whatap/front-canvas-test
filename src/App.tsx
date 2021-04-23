@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
+import mockData from "./data.json";
 
 const Container = styled.div`
 	width: 100%;
@@ -29,43 +30,52 @@ const Label = styled.span`
 
 
 function App() {
+	const [categoryOne, setCategoryOne] = useState('node');
+	const [categoryTwo, setCategoryTwo] = useState('none');
+	const [data, setData] = useState<any>();
+
+	useEffect(() => {
+		setTimeout(() => {
+			setData(mockData);
+		}, 3000);
+	}, []);
+
+	console.log("data =", data);
+
   return (
 		<Container>
 			<Topbar>
 				<Label>
 					1단 분류
 				</Label>
-				<Select>
-					<option>
+				<Select value={categoryOne} onChange={(e) => {setCategoryOne(e.target.value)}}>
+					<option value="node">
 						Node
 					</option>
-					<option>
+					<option value="image">
 						Image
 					</option>
-					<option>
+					<option value="pod">
 						Pod
 					</option>
-					<option>
+					<option value="rs">
 						RS
 					</option>
 				</Select>
 				<Label>
 					2단 분류
 				</Label>
-				<Select>
-					<option>
+				<Select value={categoryTwo} onChange={(e) => {setCategoryTwo(e.target.value)}}>
+					<option value="none">
 						None
 					</option>
-					<option>
-						Node
-					</option>
-					<option>
+					<option value="image">
 						Image
 					</option>
-					<option>
+					<option value="pod">
 						Pod
 					</option>
-					<option>
+					<option value="rs">
 						RS
 					</option>
 				</Select>
