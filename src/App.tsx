@@ -35,7 +35,7 @@ const ChartWrapper = styled.div`
 
 
 function App() {
-	const [categoryOne, setCategoryOne] = useState('node');
+	const [categoryOne, setCategoryOne] = useState('none');
 	const [categoryTwo, setCategoryTwo] = useState('none');
 	const [data, setData] = useState<any>();
 
@@ -52,6 +52,9 @@ function App() {
 					1단 분류
 				</Label>
 				<Select value={categoryOne} onChange={(e) => {setCategoryOne(e.target.value)}}>
+				<option value="none">
+						None
+					</option>
 					<option value="node">
 						Node
 					</option>
