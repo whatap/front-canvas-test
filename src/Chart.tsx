@@ -4,7 +4,7 @@ import { Category, DataType } from './type';
 interface Props {
 	categoryOne: Category;
 	categoryTwo: Category;
-	data: DataType;
+	data: DataType[];
 }
 
 const Chart = (props: Props) => {

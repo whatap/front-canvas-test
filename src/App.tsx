@@ -52,7 +52,7 @@ function App() {
 				<Label>
 					1단 분류
 				</Label>
-				<Select value={categoryOne} onChange={(e) => {setCategoryOne(e.target.value)}}>
+				<Select value={categoryOne} onChange={(e: any) => {setCategoryOne(e.target.value);}}>
 				<option value="none">
 						None
 					</option>
@@ -72,7 +72,7 @@ function App() {
 				<Label>
 					2단 분류
 				</Label>
-				<Select value={categoryTwo} onChange={(e) => {setCategoryTwo(e.target.value)}}>
+				<Select value={categoryTwo} onChange={(e: any) => {setCategoryTwo(e.target.value)}}>
 					<option value="none">
 						None
 					</option>
