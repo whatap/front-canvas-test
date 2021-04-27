@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import mockData from "./data.json";
 import Chart from "./Chart";
+import { Category, DataType } from './type';
 
 const Container = styled.div`
 	width: 100%;
@@ -35,9 +36,9 @@ const ChartWrapper = styled.div`
 
 
 function App() {
-	const [categoryOne, setCategoryOne] = useState('none');
-	const [categoryTwo, setCategoryTwo] = useState('none');
-	const [data, setData] = useState<any>();
+	const [categoryOne, setCategoryOne] = useState<Category>('none');
+	const [categoryTwo, setCategoryTwo] = useState<Category>('none');
+	const [data, setData] = useState<Array<DataType>>([]);
 
 	useEffect(() => {
 		setTimeout(() => {

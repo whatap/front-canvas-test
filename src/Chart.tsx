@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from "react";
+import { Category, DataType } from './type';
 
 interface Props {
-	categoryOne: String;
-	categoryTwo: String;
-	data: any;
+	categoryOne: Category;
+	categoryTwo: Category;
+	data: DataType;
 }
 
 const Chart = (props: Props) => {
